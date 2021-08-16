@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 import { windowHeight, windowWidth, windowDiagonal } from '../contexts/Dimensions.js';
 
-function LevelSelect() {
+function LevelSelect({ navigation }) {
 
     //Will add ScrollView when/if I make >4 levels
     return(
@@ -15,7 +15,8 @@ function LevelSelect() {
                 <View style={styles.levelButtonContainer}>
                     <Button
                         mode="contained"
-                        style={styles.levelButton}>
+                        style={styles.levelButton}
+                        onPress={() => navigation.navigate('PlayingScreen')}>
                         <Text style={styles.levelText}>1</Text>
                     </Button>
                     <Button

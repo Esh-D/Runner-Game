@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { windowHeight, windowWidth, windowDiagonal } from '../contexts/Dimensions.js';
 
-function GameOver() {
+function GameOver({ navigation }) {
     return(
         <View style={styles.container}>
 
@@ -13,12 +13,14 @@ function GameOver() {
             <View style={styles.mainButtonContainer}>
                 <Button 
                     mode="contained"
-                    style={styles.mainButtons}>
+                    style={styles.mainButtons}
+                    onPress={() => navigation.navigate('PlayingScreen')}>
                     <Text style={styles.mainButtons}>PLAY AGAIN</Text>
                 </Button>
                 <Button 
                     mode="contained"
-                    style={styles.mainButtons}>
+                    style={styles.mainButtons}
+                    onPress={() => navigation.navigate('LevelSelect')}>
                     <Text style={styles.mainButtons}>LEVEL SELECT</Text>
                 </Button>
             </View>
@@ -26,12 +28,14 @@ function GameOver() {
             <View style={styles.lesserButtonContainer}>
                 <Button 
                     mode="contained"
-                    style={styles.lesserButtons}>
+                    style={styles.lesserButtons}
+                    onPress={() => navigation.navigate('Settings')}>
                     <Text style={styles.lesserButtonsText}>settings</Text>
                 </Button>
                 <Button 
                     mode="contained"
-                    style={styles.lesserButtons}>
+                    style={styles.lesserButtons}
+                    onPress={() => navigation.navigate('Stats')}>
                     <Text style={styles.lesserButtonsText}>stats</Text>
                 </Button>
             </View>
