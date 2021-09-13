@@ -1,6 +1,8 @@
 # Runner-Game
 ## Description
-A mobile game developed with React Native in which the user taps the screen to dodge obstacles.    Player can view gameplay stats (number of games played, number of deaths, and number of wins) through the Stats Screen and can change the game theme to the green theme, red theme, or the default blue theme through the Settings Screen.  
+A mobile game developed with React Native in which the user taps the screen to dodge obstacles.  
+  
+Player can view gameplay stats (number of games played, number of deaths, and number of wins) through the Stats Screen and can change the game theme to the green theme, red theme, or the default blue theme through the Settings Screen.  
   
 The game uses:
 * react-native-game-engine
