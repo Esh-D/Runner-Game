@@ -7,16 +7,16 @@ import { useTheme } from '../contexts/ThemeProvider';
 
 import { windowHeight, windowWidth, windowDiagonal } from '../contexts/Dimensions.js';
 
-function GameOver({ navigation }) {
+function LevelComplete({ navigation }) {
   const { theme } = useTheme();
 
-  updateData('deathNum');
+  updateData('winNum');
   updateData('gameNum');
 
   return(
     <View style={[styles.container, { backgroundColor: theme.background.backgroundColor}]}>
 
-      <Text style={[styles.title, { color: theme.title.titleColor}]}>~ GAME OVER ~</Text>
+      <Text style={[styles.title, { color: theme.title.titleColor }]}>~ LEVEL COMPLETE! ~</Text>
 
       <View style={styles.mainButtonContainer}>
         <Button 
@@ -51,7 +51,7 @@ function GameOver({ navigation }) {
   )
 }
 
-export default GameOver;
+export default LevelComplete;
 
 const styles = StyleSheet.create({
   container: {
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: windowDiagonal * 0.08,
+    fontSize: windowDiagonal * 0.06,
     fontWeight: 'bold',
     paddingBottom: windowHeight * 0.08
   },

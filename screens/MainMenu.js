@@ -1,41 +1,45 @@
 import React from 'react';
 import { Button } from 'react-native-paper';
 import { StyleSheet, Text, View } from 'react-native';
+import { useTheme } from '../contexts/ThemeProvider'; 
 
 import { windowHeight, windowWidth, windowDiagonal } from '../contexts/Dimensions.js';
 
 
 function MainMenu({ navigation }) {
-    return(
-        <View style={styles.container}>
+  const { theme } = useTheme();
 
-            <Text style={styles.title}>~ RUNNER ~</Text>
+  return(
+      <View style={[styles.container, { backgroundColor: theme.background.backgroundColor }]}>
 
-            <View style={styles.mainButtonContainer}>
-                <Button 
-                    mode="contained"
-                    style={styles.mainButtons}
-                    onPress={() => navigation.navigate('LevelSelect')}>
-                    <Text style={styles.mainButtons}>PLAY</Text>
-                </Button>
-            </View>
+          <Text style={[styles.title, { color: theme.title.titleColor}]}>~ RUNNER ~</Text>
 
-            <View style={styles.lesserButtonContainer}>
-                <Button 
-                    mode="contained"
-                    style={styles.lesserButtons}
-                    onPress={() => navigation.navigate('Settings')}>
-                    <Text style={styles.lesserButtonsText}>settings</Text>
-                </Button>
-                <Button 
-                    mode="contained"
-                    style={styles.lesserButtons}
-                    onPress={() => navigation.navigate('Stats')}>
-                    <Text style={styles.lesserButtonsText}>stats</Text>
-                </Button>
-            </View>
-        </View>
-    )
+          <View style={styles.mainButtonContainer}>
+              <Button 
+                  mode="contained"
+                  style={[styles.mainButtons, { borderColor: theme.mainButton.outlineColor, backgroundColor: theme.mainButton.innerColor, color: theme.mainButton.textColor }]}
+                  onPress={() => navigation.navigate('LevelSelect')}>
+                  <Text style={styles.mainButtons}>PLAY</Text>
+              </Button>
+          </View>
+
+          <View style={styles.lesserButtonContainer}>
+              <Button 
+                  mode="contained"
+                  style={[styles.lesserButtons, { borderColor: theme.lesserButton.outlineColor, backgroundColor: theme.lesserButton.innerColor}]}
+                  onPress={() => navigation.navigate('Settings')}>
+                  <Text style={[styles.lesserButtonsText, { color: theme.lesserButton.textColor }]}>settings</Text>
+              </Button>
+              <Button 
+                  mode="contained"
+                  style={[styles.lesserButtons, { borderColor: theme.lesserButton.outlineColor, backgroundColor: theme.lesserButton.innerColor}]}
+                  onPress={() => navigation.navigate('Stats')}>
+                  <Text style={[styles.lesserButtonsText, { color: theme.lesserButton.textColor }]}>stats</Text>
+              </Button>
+          </View>
+
+      </View>
+  )
 }
 
 export default MainMenu;
@@ -43,14 +47,12 @@ export default MainMenu;
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#141B41',
       alignItems: 'center',
       justifyContent: 'center',
     },
     title: {
       fontSize: windowDiagonal * 0.08,
       fontWeight: 'bold',
-      color: '#6F9CEB',
       paddingBottom: windowHeight * 0.08
     },
     mainButtonContainer: {
@@ -59,10 +61,7 @@ const styles = StyleSheet.create({
     },
     mainButtons: {
       borderWidth: windowDiagonal * 0.008622,
-      borderColor: '#6F9CEB',
-      backgroundColor: '#306BAC',
       fontSize: windowDiagonal * 0.03,
-      color: '#FFF',
       fontWeight: 'bold',
       width: windowWidth * 0.3
     },
@@ -72,14 +71,10 @@ const styles = StyleSheet.create({
     lesserButtonsText: {
       fontSize: windowDiagonal * 0.015,
       fontWeight: 'bold',
-      color: '#306BAC',
     },
     lesserButtons: {
       borderWidth: windowDiagonal * 0.006467,
-      borderColor: '#306BAC',
-      backgroundColor: '#141B41',
       width: windowWidth * 0.2,
       margin: windowWidth * 0.02
-      
     }
   });
