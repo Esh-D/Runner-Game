@@ -1,6 +1,8 @@
 # Runner-Game
+## Description
 A mobile game developed with React Native in which the user taps to dodge obstacles. 
 
+## Screenshots
 ![defaultMainMenu](https://user-images.githubusercontent.com/42325719/133143400-8b6ebe0e-055d-4f4b-b7c4-e5b7f80815cc.jpg)
 
 ![defaultLevelSelect](https://user-images.githubusercontent.com/42325719/133143399-ca412b67-827f-408b-81e6-61aedd9eceff.jpg)
