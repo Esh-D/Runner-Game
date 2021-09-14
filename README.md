@@ -17,6 +17,8 @@ The game uses:
 
 ![defaultLevelSelect](https://user-images.githubusercontent.com/42325719/133143399-ca412b67-827f-408b-81e6-61aedd9eceff.jpg)
 
+![defaultLevel1](https://user-images.githubusercontent.com/42325719/133176382-9dd21901-a263-49dc-8eaf-ad08d7451fb1.png)
+
 ![defaultGameOverScreen](https://user-images.githubusercontent.com/42325719/133143395-956becbd-f22c-41d1-b03f-b83a275bfe3c.jpg)
 
 ![defaultLevelCompleteScreen](https://user-images.githubusercontent.com/42325719/133143391-8a55c92a-39f3-476b-9003-1ec3ccf99dd8.jpg)
