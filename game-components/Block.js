@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export default Block = () => {
+export default function Block() {
     return (
         <View style={{
             position: 'absolute',
