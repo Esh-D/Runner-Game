@@ -17,6 +17,7 @@ The game uses:
 
 ![defaultLevelSelect](https://user-images.githubusercontent.com/42325719/133143399-ca412b67-827f-408b-81e6-61aedd9eceff.jpg)
 
+Level 1, runner is the square on the left, obstacles to the right of it:
 ![defaultLevel1](https://user-images.githubusercontent.com/42325719/133176382-9dd21901-a263-49dc-8eaf-ad08d7451fb1.png)
 
 ![defaultGameOverScreen](https://user-images.githubusercontent.com/42325719/133143395-956becbd-f22c-41d1-b03f-b83a275bfe3c.jpg)
